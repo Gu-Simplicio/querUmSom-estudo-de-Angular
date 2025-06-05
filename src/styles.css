@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --white: #fff;
+    --black: #000;
+    --gray: #98a869;
+    --primary: #ff6b00;
+    --secondary: #5a0956;
+    --tertiary: #14b114;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100dvw;
+    min-height: 100dvh;
+}

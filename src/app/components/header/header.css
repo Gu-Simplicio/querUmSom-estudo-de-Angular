@@ -1,0 +1,54 @@
+header{
+    width: 100%;
+    display: flex;
+    min-height: 15dvh;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: var(--primary);
+
+    && div {
+        gap: 1.5rem;
+        width: 75%;
+        display: flex;
+        align-items: center;
+
+        && a {
+            width: 10%;
+            text-align: end;
+
+            && img {width: 10dvw}
+        }
+
+        && h1 { font-size: 1.5rem; }
+    }
+
+    && nav {
+        gap: 1rem;
+        width: 20%;
+        display: flex;
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        justify-content: space-around;
+
+        && a{
+            position: relative;
+            color: var(--black);
+            text-decoration: none;
+        }        
+        && a::after {
+            left: 0;
+            width: 0;
+            bottom: 0;
+            height: 1px;
+            content: '';
+            position: absolute;
+            background: var(--black);
+            transition: .25s ease-in-out;
+        }
+
+        && a:hover::after{
+            width: 80%;
+        }
+    }
+}
