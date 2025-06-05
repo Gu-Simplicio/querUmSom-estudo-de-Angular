@@ -10,9 +10,11 @@ import { InstrumentoService } from '../../services/instrumento-service';
   styleUrl: './carrinho.css'
 })
 export class Carrinho {
-  private instrumentos = [];
+  instrumentosSalvos: any = [];
 
   constructor(private instrumentoService: InstrumentoService){
-    this.instrumentos = this.instrumentoService.getInstrumentos();
+    this.instrumentosSalvos = localStorage.getItem("carrinhoQuerUmSom")?.split(",");
   }
+
+  
 }
