@@ -15,4 +15,8 @@ export class Home {
   constructor(private instrumentoService: InstrumentoService ){
     this.instrumentos = instrumentoService.getInstrumentos();
   }
+
+  adicionaAoCarrinho(instrumento: string): void{
+    console.log(localStorage.getItem("carrinho"))
+  } 
 }
