@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class InstrumentoService {
-  instrumentos: any;
+  private instrumentos: any;
 
   constructor() {
     this.instrumentos = [
