@@ -17,6 +17,24 @@ export class Home {
   }
 
   adicionaAoCarrinho(instrumento: string): void{
-    console.log(localStorage.getItem("carrinho"))
+    let carrinho: string | null = localStorage.getItem("carrinhoQuerUmSom");
+
+    if(carrinho === null){
+      localStorage.setItem("carrinhoQuerUmSom", instrumento);
+    } else {
+      let instruSalvos: Array<string> = carrinho.split(",");
+
+      localStorage.removeItem("querUmSom");
+
+      instruSalvos.push(instrumento);
+
+      let instrumentosParaSalvar: string = "";
+
+      instruSalvos.forEach((instru, i) => {
+        i == instruSalvos.length - 1 ? instrumentosParaSalvar += instru : instrumentosParaSalvar += instru + ", ";
+      })
+
+      localStorage.setItem("carrinhoQuerUmSom", instrumentosParaSalvar);
+    }
   } 
 }

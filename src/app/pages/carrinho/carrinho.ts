@@ -10,10 +10,14 @@ import { InstrumentoService } from '../../services/instrumento-service';
   styleUrl: './carrinho.css'
 })
 export class Carrinho {
-  instrumentosSalvos: any = [];
+  instrumentosSalvos: string[] = [];
 
   constructor(private instrumentoService: InstrumentoService){
-    this.instrumentosSalvos = localStorage.getItem("carrinhoQuerUmSom")?.split(",");
+    let carrinho = localStorage.getItem("carrinhoQuerUmSom");
+
+    if(carrinho != null){
+      this.instrumentosSalvos = carrinho.split(",");
+    }
   }
 
   
