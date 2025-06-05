@@ -41,7 +41,7 @@ export class InstrumentoService {
     ];
   }
 
-  getInstru(): any{
-    console.log(this.instrumentos);
+  getInstrumentos(): any{
+      return this.instrumentos;
   }
 }

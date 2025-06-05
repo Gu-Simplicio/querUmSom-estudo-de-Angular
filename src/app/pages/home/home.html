@@ -1,46 +1,29 @@
 <app-header></app-header>
 
 <main>
-    <h1>
-        Lorem Ipsum
-    </h1>
+    <ul id="listaItens">
+        @for(instru of instrumentos; track instru){
+            <li class="item">   
+                <img [src]="instru.img" alt="">
+                <h3>
+                    {{ instru.nome }}
+                </h3>
+                <p>
+                    {{ instru.descricao }}
+                </p>
+                <span>
+                    R$ {{instru.preco}}
+                </span>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ex unde ut perspiciatis asperiores deleniti, labore eum maiores, expedita doloribus ipsa sit delectus et, magni voluptatem reprehenderit numquam error! Autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit est veritatis fugiat deleniti corporis vel debitis nemo consectetur voluptas aliquid. Dolorum dolorem voluptatem earum exercitationem maxime voluptatibus dicta, quos atque.
-    </p>
-
-    <h1>Lorem</h1>
-    
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptas dolorem eius ea sed, aspernatur quisquam at nesciunt pariatur enim iste! Delectus, sit? Modi temporibus dicta numquam ipsam ea quisquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, iste porro dignissimos et incidunt commodi numquam cumque officia eaque dolorem aspernatur nisi nam dolore possimus quos facere adipisci, quisquam optio.
-    </p>
-
-    <h1>
-        Lorem Ipsum
-    </h1>
-
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ex unde ut perspiciatis asperiores deleniti, labore eum maiores, expedita doloribus ipsa sit delectus et, magni voluptatem reprehenderit numquam error! Autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit est veritatis fugiat deleniti corporis vel debitis nemo consectetur voluptas aliquid. Dolorum dolorem voluptatem earum exercitationem maxime voluptatibus dicta, quos atque.
-    </p>
-
-    <h1>Lorem</h1>
-    
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptas dolorem eius ea sed, aspernatur quisquam at nesciunt pariatur enim iste! Delectus, sit? Modi temporibus dicta numquam ipsam ea quisquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, iste porro dignissimos et incidunt commodi numquam cumque officia eaque dolorem aspernatur nisi nam dolore possimus quos facere adipisci, quisquam optio.
-    </p>
-    <h1>
-        Lorem Ipsum
-    </h1>
-
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ex unde ut perspiciatis asperiores deleniti, labore eum maiores, expedita doloribus ipsa sit delectus et, magni voluptatem reprehenderit numquam error! Autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit est veritatis fugiat deleniti corporis vel debitis nemo consectetur voluptas aliquid. Dolorum dolorem voluptatem earum exercitationem maxime voluptatibus dicta, quos atque.
-    </p>
-
-    <h1>Lorem</h1>
-    
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptas dolorem eius ea sed, aspernatur quisquam at nesciunt pariatur enim iste! Delectus, sit? Modi temporibus dicta numquam ipsam ea quisquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, iste porro dignissimos et incidunt commodi numquam cumque officia eaque dolorem aspernatur nisi nam dolore possimus quos facere adipisci, quisquam optio.
-    </p>
+                <button [id]=`teste${instru.nome}`>
+                    Comprar
+                </button>
+                <button>
+                    Adicionar ao carrinho
+                </button>
+            </li>
+        }
+    </ul>
 </main>
 
 <app-footer></app-footer>
